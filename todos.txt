@@ -1,9 +1,4 @@
-Cook
-clean
-work
-exit
-clean the bedroom
-cook
-library
-exit the class
-Watering the plants
+gardening
+cooking
+cleaning
+coding
