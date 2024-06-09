@@ -1,6 +1,7 @@
 import tkinter as tk
 from tkinter import ttk, messagebox
 from functions import get_todos, append_todos, write_todo
+from PIL import ImageTk, Image
 
 def add_todo():
     todo_text = todo_entry.get("1.0", tk.END).strip()
@@ -51,23 +52,23 @@ def update_todos():
 # Create main window
 root = tk.Tk()
 root.title("To-Do App")
-root.configure(bg="Medium Purple")  # Set background color
+root.configure(bg="Seagreen3")  # Set background color
 
 # Todo entry
-todo_entry = tk.Text(root, width=40, height=5)
+todo_entry = tk.Text(root, width=40, height=6)
 todo_entry.grid(row=1, column=0, padx=10, pady=10, sticky="nw")
 
 # Label above writing box
-write_label = tk.Label(root, text="Write your new task", font=("Monospace", 12, "bold"), fg="white", bg="Medium Purple")
+write_label = tk.Label(root, text="Write your new task", font=("Monospace", 15, "bold"), fg="white", bg="Seagreen3")
 write_label.grid(row=0, column=0, padx=10, pady=(10, 5), sticky="nw")
 
 # Add Todo button
-add_button = ttk.Button(root, text="Add Todo", command=add_todo, width=20, style="C.TButton")
-add_button.grid(row=1, column=1, padx=(0, 10), pady=5, sticky="ne")
+add_button = ttk.Button(root, text="Add Todo", command=add_todo, width=25, style="C.TButton")
+add_button.grid(row=1, column=1, padx=(0, 10), pady=10, sticky="ne")
 
 # Update Todo button
-update_button = ttk.Button(root, text="Update Todo", command=update_todo, width=20, style="C.TButton")
-update_button.grid(row=2, column=1, padx=(0, 10), pady=5, sticky="ne")
+update_button = ttk.Button(root, text="Update Todo", command=update_todo, width=25, style="C.TButton")
+update_button.grid(row=1, column=1, padx=(0, 10), pady=40, sticky="ne")
 
 # Configure row to stretch
 root.grid_rowconfigure(0, weight=1)
@@ -76,23 +77,27 @@ root.grid_rowconfigure(2, weight=1)
 root.grid_rowconfigure(3, weight=1)
 
 # Complete Todo button
-complete_button = ttk.Button(root, text="Complete", command=complete_todo, width=20, style="C.TButton")
-complete_button.grid(row=3, column=1, padx=(0, 10), pady=5, sticky="ne")
+complete_button = ttk.Button(root, text="Complete", command=complete_todo, width=25, style="C.TButton")
+complete_button.grid(row=1, column=1, padx=(0, 10), pady=70, sticky="ne")
 
-# Write button
-write_button = ttk.Button(root, text="Write", command=write_todos, width=20, style="C.TButton")
-write_button.grid(row=4, column=1, padx=(0, 10), pady=5, sticky="ne")
-
+to_do_label = tk.Label(root, text="To-do List", font=("Monospace", 20, "bold"), fg="white", bg="Seagreen3")
+to_do_label.grid(row=1, column=0, padx=10, pady=(120,0), sticky="nw")
 # Todo list
-todo_listbox = tk.Listbox(root, width=50)
+todo_listbox = tk.Listbox(root, width=55,height=12)
 todo_listbox.grid(row=2, column=0, rowspan=3, padx=10, pady=10, sticky="ns")
 
-# Initial update of todos
+# Image in column 2
+image_path = "31d0ad0f84c1c86e87dbcd62d09d51f1.jpg"  # Update with your image path
+img = Image.open(image_path)
+img = img.resize((200,300))  # Resize image to fit the size of a to-do box
+img = ImageTk.PhotoImage(img)
+image_label = tk.Label(root, image=img, highlightthickness=0)
+image_label.grid(row=2, column=1, columnspan=2, padx=10, pady=10, sticky="nsew")
 update_todos()
 
 # Configure ttk Style
 style = ttk.Style()
-style.configure("C.TButton", foreground="black", background="#7289da", borderwidth=0, font=("Helvetica", 10))
+style.configure("C.TButton", foreground="black", background="aquamarine", borderwidth=0, font=("Monospace", 10))
 # Add simple shadow effect using border color
 style.map("C.TButton", background=[('active', "#5f73b7")], bordercolor=[('active', "#4f5f77")])
 
