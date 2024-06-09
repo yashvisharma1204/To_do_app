@@ -52,14 +52,14 @@ def update_todos():
 # Create main window
 root = tk.Tk()
 root.title("To-Do App")
-root.configure(bg="Seagreen3")  # Set background color
+root.configure(bg="medium sea green")  # Set background color
 
 # Todo entry
 todo_entry = tk.Text(root, width=40, height=6)
 todo_entry.grid(row=1, column=0, padx=10, pady=10, sticky="nw")
 
 # Label above writing box
-write_label = tk.Label(root, text="Write your new task", font=("Monospace", 15, "bold"), fg="white", bg="Seagreen3")
+write_label = tk.Label(root, text="Write your new task", font=("Monospace", 15, "bold"), fg="white", bg="medium sea green")
 write_label.grid(row=0, column=0, padx=10, pady=(10, 5), sticky="nw")
 
 # Add Todo button
@@ -80,7 +80,7 @@ root.grid_rowconfigure(3, weight=1)
 complete_button = ttk.Button(root, text="Complete", command=complete_todo, width=25, style="C.TButton")
 complete_button.grid(row=1, column=1, padx=(0, 10), pady=70, sticky="ne")
 
-to_do_label = tk.Label(root, text="To-do List", font=("Monospace", 20, "bold"), fg="white", bg="Seagreen3")
+to_do_label = tk.Label(root, text="To-do List", font=("Monospace", 20, "bold"), fg="white", bg="medium sea green")
 to_do_label.grid(row=1, column=0, padx=10, pady=(120,0), sticky="nw")
 # Todo list
 todo_listbox = tk.Listbox(root, width=55,height=12)
@@ -97,9 +97,9 @@ update_todos()
 
 # Configure ttk Style
 style = ttk.Style()
-style.configure("C.TButton", foreground="black", background="aquamarine", borderwidth=0, font=("Monospace", 10))
+style.configure("C.TButton", foreground="Green",background="medium sea green", borderwidth=0, font=("Monospace", 10, "bold"))
 # Add simple shadow effect using border color
-style.map("C.TButton", background=[('active', "#5f73b7")], bordercolor=[('active', "#4f5f77")])
+style.map("C.TButton", background=[('active', "medium sea green")], bordercolor=[('active', "#4f5f77")])
 
 # Run the application
 root.mainloop()
