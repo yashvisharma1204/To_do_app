@@ -43,7 +43,15 @@ The GUI is created using `tkinter`. It includes a main window, text entry for to
 
 The application is run using `tkinter`'s `mainloop()` function.
 
-## Command-Line Interface (CLI) Interaction
+## Screenshots
+<img width="432" alt="image" src="https://github.com/yashvisharma1204/To_do_app/assets/137611141/d26db249-ddde-42f4-8572-62c5311c46c5">
 
-For those who prefer a command-line interface, a basic CLI is included to add, show, edit, complete, and exit the to-do application.
+### Write and ADD using add button
+<img width="435" alt="image" src="https://github.com/yashvisharma1204/To_do_app/assets/137611141/5369086d-d568-46ad-a234-11190d53db9f">
 
+### Update the already added task by update todo
+!!! Select the todo first<br>
+<img width="435" alt="image" src="https://github.com/yashvisharma1204/To_do_app/assets/137611141/42a4a3ee-8379-4022-a518-6b1335678b63">
+
+### Complete a task and remove it from list
+<img width="435" alt="image" src="https://github.com/yashvisharma1204/To_do_app/assets/137611141/edb6321b-1724-45dd-9cdf-a75ab65ff865">

@@ -52,12 +52,20 @@ def update_todos():
 
 root = tk.Tk()
 root.title("To-Do App")
+<<<<<<< HEAD
 root.configure(bg="medium sea green")  
+=======
+root.configure(bg="medium sea green")  # Set background color
+>>>>>>> f97f7656412651d52d2a6cf80d6578d737cfd4ab
 
 todo_entry = tk.Text(root, width=40, height=6)
 todo_entry.grid(row=1, column=0, padx=10, pady=10, sticky="nw")
 
+<<<<<<< HEAD
 
+=======
+# Label above writing box
+>>>>>>> f97f7656412651d52d2a6cf80d6578d737cfd4ab
 write_label = tk.Label(root, text="Write your new task", font=("Monospace", 15, "bold"), fg="white", bg="medium sea green")
 write_label.grid(row=0, column=0, padx=10, pady=(10, 5), sticky="nw")
 
@@ -93,6 +101,14 @@ image_label = tk.Label(root, image=img, highlightthickness=0)
 image_label.grid(row=2, column=1, columnspan=2, padx=10, pady=10, sticky="nsew")
 update_todos()
 
+<<<<<<< HEAD
+=======
+# Configure ttk Style
+style = ttk.Style()
+style.configure("C.TButton", foreground="Green",background="medium sea green", borderwidth=0, font=("Monospace", 10, "bold"))
+# Add simple shadow effect using border color
+style.map("C.TButton", background=[('active', "medium sea green")], bordercolor=[('active', "#4f5f77")])
+>>>>>>> f97f7656412651d52d2a6cf80d6578d737cfd4ab
 
 style = ttk.Style()
 style.configure("C.TButton", foreground="Green",background="medium sea green", borderwidth=0, font=("Monospace", 10, "bold"))
