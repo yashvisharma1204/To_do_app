@@ -11,7 +11,7 @@ A simple to-do application with a graphical user interface (GUI) built using `tk
 
 ## File Structure
 
-- `app.py`: Main application code including the GUI and user interactions.
+- `main.py` and `gui.py`: Main application code including the GUI and user interactions.
 - `functions.py`: Helper functions for reading, writing, and updating the to-do list stored in `todos.txt`.
 - `todos.txt`: Text file to store the to-do items.
 
@@ -23,7 +23,7 @@ Contains the following functions:
 - `append_todos(todo)`: Appends a new to-do item to the end of the `todos.txt` file.
 - `write_todo()`: Writes a list of to-do items to the `todos.txt` file, replacing its contents.
 
-## `app.py`
+## `main.py` and `gui.py`
 
 Main application logic including the GUI setup and user interaction functions.
 
