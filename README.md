@@ -50,7 +50,7 @@ The application is run using `tkinter`'s `mainloop()` function.
 <img width="435" alt="image" src="https://github.com/yashvisharma1204/To_do_app/assets/137611141/5369086d-d568-46ad-a234-11190d53db9f">
 
 ### Update the already added task by update todo
-!!! Select the todo first
+!!! Select the todo first<br>
 <img width="435" alt="image" src="https://github.com/yashvisharma1204/To_do_app/assets/137611141/42a4a3ee-8379-4022-a518-6b1335678b63">
 
 ### Complete a task and remove it from list
