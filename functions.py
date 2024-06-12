@@ -1,6 +1,6 @@
 def get_todos():
     """
-    Read a text file and return the list of to-do items.
+    Read a text file and return the list of to-do items
     """
     with open('todos.txt', 'r') as file:
         todos = file.readlines()

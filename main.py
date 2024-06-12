@@ -7,7 +7,7 @@ while True:
     user_action = input("Type add, show, edit, complete, or exit: ").strip()
     
     if user_action.startswith('add'):
-        todo = user_action[4:] + '\n'  # Add newline character
+        todo = user_action[4:] + '\n'  
         append_todos(todo)   
     elif user_action.startswith('show'):
         todos = get_todos()
